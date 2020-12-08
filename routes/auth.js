@@ -5,16 +5,16 @@ const _ = require("lodash");
 const Joi = require("joi");
 router.post("/", async (req, res) => {
   const { error } = validate(req.body);
-    console.log("verified")
+  // console.log("verified")
   if (error) {
-    console.log(error);
+    // console.log(error);
     return res
       .status(200)
       .send({ message: error.details[0].message, success: false });
   }
 
   let user = await User.findOne({ name: req.body.name });
-    if (!user)
+  if (!user)
     return res
       .status(200)
       .send({ message: "Invalid email or password", success: false });
@@ -33,7 +33,7 @@ router.post("/", async (req, res) => {
 
 const validate = (req) => {
   const schema = {
-    name:Joi.string().required(),
+    name: Joi.string().required(),
     password: Joi.string().required().max(255),
   };
   return Joi.object(schema).validate(req, schema);

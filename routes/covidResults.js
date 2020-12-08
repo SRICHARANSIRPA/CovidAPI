@@ -45,7 +45,7 @@ router.post("/", async (req, res) => {
       message: "Successfully Data Saved ",
     });
   } catch (er) {
-    console.log(er);
+    // console.log(er);
     res.status(500).send({ success: false, message: "Internal Error" });
   }
 });

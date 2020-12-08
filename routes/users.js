@@ -28,7 +28,7 @@ router.post("/", async (req, res) => {
       .header("x-auth-token", token)
       .send({ success: true, data: _.pick(user, ["_id", "name"]) });
   } catch (er) {
-    console.log(er);
+    // console.log(er);
     res.status(500).send({ message: "Internal Error", success: false });
   }
 });

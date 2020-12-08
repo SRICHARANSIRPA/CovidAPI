@@ -13,7 +13,7 @@ module.exports = function (app) {
   app.use(express.json());
   app.use(cors(corsOptions));
   app.use("/api/users", users);
-  console.log("success");
+  // console.log("success");
   app.use("/api/auth", auth);
   app.use("/api/covidData", covidresults);
   app.use(error);
