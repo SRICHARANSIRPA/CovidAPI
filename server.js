@@ -8,5 +8,5 @@ require("./startup/db")();
 require("./startup/config")();
 
 //Listining to PORT
-const port = process.env.COVID_PORT || 3003;
+const port = process.env.COVID_PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));

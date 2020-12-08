@@ -6,6 +6,9 @@
   "author": {
     "name": ""
   },
+  "engines": {
+    "node": "12.18.3"
+  },
   "dependencies": {
     "config": "^3.3.3",
     "cors": "^2.8.5",
