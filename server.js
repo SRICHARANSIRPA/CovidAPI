@@ -6,6 +6,9 @@ require("./startup/logging")();
 require("./startup/routes")(app);
 require("./startup/db")();
 require("./startup/config")();
+app.get("/gethello", (req, res) => {
+  return res.send("HELLO WORLD");
+});
 app.get("/", (req, res) => {
   return res.send("HELLO WORLD");
 });
